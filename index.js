@@ -16,25 +16,63 @@ let computerSelection = getComputerChoice();
 
 
 
+function game(playerSelection, computerSelection) {
+    let count = 0;
+    
+        if (computerSelection === "rock" && playerSelection === "paper"){
+            count++;
+            return "You win!, Paper beats rock!";
+        } else if (computerSelection === "rock" && playerSelection === "scissors"){
+            count--;
+            return "You lose!, Rock beats scissors!";
+        } else if (computerSelection === "paper" && playerSelection === "rock"){
+            count--;
+            return "You lose!, paper beats rock!";
+        } else if (computerSelection === "paper" && playerSelection === "scissors"){
+            count++;
+            return "You win!, scissors beats paper!";
+        } else if (computerSelection === "scissors" && playerSelection === "rock"){
+            count++;
+            return "You win!, rock beats scissors!";
+        } else if (computerSelection === "scissors" && playerSelection === "paper"){
+            count--;
+            return "You lose!, scissors beats paper!";
+        } else if (computerSelection === playerSelection){
+            return "Its a draw!";
+        } else {
+            return "Please select a valid option";
+        }
 
-function gameRound(playerSelection, computerSelection) {
-    if (computerSelection === "rock" && playerSelection === "paper"){
-         return "You win!, Paper beats rock!";
-    } else if (computerSelection === "rock" && playerSelection === "scissors"){
-        return "You lose!, Rock beats scissors!";
-    } else if (computerSelection === "paper" && playerSelection === "rock"){
-        return "You lose!, paper beats rock!";
-    } else if (computerSelection === "paper" && playerSelection === "scissors"){
-        return "You win!, scissors beats paper!";
-    } else if (computerSelection === "scissors" && playerSelection === "rock"){
-        return "You win!, rock beats scissors!";
-    } else if (computerSelection === "scissors" && playerSelection === "paper"){
-        return "You lose!, scissors beats paper!";
-    } else if (computerSelection === playerSelection){
-        return "Its a draw!";
-    } else {
-        return "Please select a valid option";
-    }
-}
+} 
 
 console.log(gameRound(playerSelection, computerSelection));
+
+// 5 round game
+// Tracks wins and losses for each round
+// Prints the winner at the end of the game
+
+// function gameRound(playerSelection, computerSelection) {
+    // if (computerSelection === "rock" && playerSelection === "paper"){
+        // count++;
+        // return "You win!, Paper beats rock!";
+    // } else if (computerSelection === "rock" && playerSelection === "scissors"){
+    //     count--;
+    //     return "You lose!, Rock beats scissors!";
+    // } else if (computerSelection === "paper" && playerSelection === "rock"){
+    //     count--;
+    //     return "You lose!, paper beats rock!";
+    // } else if (computerSelection === "paper" && playerSelection === "scissors"){
+    //     count++;
+    //     return "You win!, scissors beats paper!";
+    // } else if (computerSelection === "scissors" && playerSelection === "rock"){
+    //     count++;
+    //     return "You win!, rock beats scissors!";
+    // } else if (computerSelection === "scissors" && playerSelection === "paper"){
+    //     count--;
+    //     return "You lose!, scissors beats paper!";
+    // } else if (computerSelection === playerSelection){
+    //     return "Its a draw!";
+    // } else {
+    //     return "Please select a valid option";
+    // }
+// }
