@@ -18,30 +18,23 @@ let userScore = 0;
 let compScore = 0;
 
 function gameRound(playerSelection, computerSelection) {
-    // let count = 0;
     if (computerSelection === "rock" && playerSelection === "paper"){
         userScore++;
-        console.log("You are on: " + userScore + " point(s)")
         return "You win! Paper beats rock!";
     } else if (computerSelection === "rock" && playerSelection === "scissors"){
         compScore++;
-        console.log("You are on: " + userScore + " point(s)")
         return "You lose! Rock beats scissors!";
     } else if (computerSelection === "paper" && playerSelection === "rock"){
         compScore++;
-        console.log("You are on: " + userScore + " point(s)")
         return "You lose! Paper beats rock!";
     } else if (computerSelection === "paper" && playerSelection === "scissors"){
         userScore++;
-        console.log("You are on: " + userScore + " point(s)")
         return "You win! Scissors beats paper!";
     } else if (computerSelection === "scissors" && playerSelection === "rock"){
         userScore++;
-        console.log("You are on: " + userScore + " point(s)")
         return "You win! Rock beats scissors!";
     } else if (computerSelection === "scissors" && playerSelection === "paper"){
         compScore++;
-        console.log("You are on: " + userScore + " point(s)")
         return "You lose! Scissors beats paper!";
     } else if (computerSelection === playerSelection){
         return "Its a draw!";
@@ -50,8 +43,10 @@ function gameRound(playerSelection, computerSelection) {
     }
 }
 
-gameRound(playerSelection, computerSelection);
+
 console.log(gameRound(playerSelection, computerSelection));
+console.log("Your score: " + userScore);
+console.log("Computers score: " + compScore);
 
 
 // 5 round game
